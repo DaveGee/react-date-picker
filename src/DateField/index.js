@@ -482,7 +482,7 @@ export default class DateField extends Component {
     if (activeDate) {
       const date = this.toMoment(activeDate)
 
-      forwardTime(this.time, date)
+      forwardTime(this.time || moment(), date)
 
       this.setValue(date, { skipTime: !!this.time })
     }
